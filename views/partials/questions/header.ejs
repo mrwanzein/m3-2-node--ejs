@@ -1,3 +1,16 @@
 <header>
-    <h1>Node: Workshop 2
+    <h1>Node: Workshop 2</h1>
+    <button style="margin: 0 10px;" onclick="toPreviousPage()">Previous page</button>
+    <button style="margin: 0 10px;" onclick="toNextPage()">Next page</button>
 </header>
+<script>
+    let toPreviousPage = () => {
+        let questionNum = document.getElementsByTagName('h3')[0];
+        location.href=`http://localhost:4000/question${parseFloat(questionNum.innerHTML.slice(-1)) - 1}`;
+    }
+
+    let toNextPage = () => {
+        let questionNum = document.getElementsByTagName('h3')[0];
+        location.href=`http://localhost:4000/question${parseFloat(questionNum.innerHTML.slice(-1)) + 1}`;
+    }
+</script>
