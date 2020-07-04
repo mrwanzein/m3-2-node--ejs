@@ -56,5 +56,9 @@ const q5 = (req, res) => {
   res.render('pages/question5', {popularGirlNames: popularGirlNames});
 };
 
+const homepage =  (req, res) => {
+  res.render('pages/homePage');
+}
+
 // We export the functions so that they may be 'required' or imported in other files.
-module.exports = { q1, q2, q3, q4, q5 };
+module.exports = { q1, q2, q3, q4, q5, homepage };

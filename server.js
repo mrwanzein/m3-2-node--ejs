@@ -22,6 +22,7 @@ express()
   .set('view engine', 'ejs')
 
   // endpoints
+  .get('/', exercisesP1.homepage)
   .get('/question1', exercisesP1.q1)
   .get('/question2', exercisesP1.q2)
   .get('/question3', exercisesP1.q3)
